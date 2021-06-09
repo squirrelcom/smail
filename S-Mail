@@ -3,9 +3,9 @@
 #trap goodbye INT HUP
 
 usage() {
-	echo "Smail v0.1.0: Send or read emails from your terminal."
+	echo "S-Mail v0.0.1: Send or read emails from your terminal."
 	echo ""
-	echo "Usage: smail [options] [command]"
+	echo "Usage: S-Mail [options] [command]"
 	echo ""
 	echo "Options:"
 	echo "  -v		verbose output"
@@ -20,23 +20,17 @@ usage() {
 	echo "  help		show this help"
 	echo ""
 	echo "Examples:"
-	echo "  smail config	Run the configuration script"
-	echo "  smail		Read emails"
+	echo "  S-Mail config	 Run the configuration script"
+	echo "  S-Mail		 Read emails"
 	echo ""
-	echo "Report bugs to: bleemayer@gmail.com"
-	echo "Home page: <https://www.github.com/blmayer/smail/>"
-	echo "General help: <https://www.github.com/blmayer/smail/wiki>"
+	echo "Report bugs to: the github issues section"
+	echo "Home page: <https://www.github.com/squirrelcom/S-Mail/>"
+	echo "General help: <https://www.github.com/squirrelcom/S-Mail/wiki>"
 }
 
 show_version() {
-	echo "smail 0.1.0"
-	echo "Copyright (C) 2020 Brian Mayer."
-	echo "License MIT: MIT License <https://opensource.org/licenses/MIT>"
-	echo "THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,"
-	echo "EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF"
-	echo "MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT."
-	echo ""
-	echo "Written by Brian Lee Mayer."
+	echo "S-Mail 0.1.0"
+	echo "Copyright (C) 2021 SquirrelCom."
 }
 
 goodbye() {
@@ -111,7 +105,7 @@ read_opts() {
 
 configure() {
 	echo "Running configuration"
-	[ -e "$HOME/.config/smail" ] || mkdir -p "$HOME/.config/smail"
+	[ -e "$HOME/.config/S-Mail" ] || mkdir -p "$HOME/.config/smail"
 
 	echo "Enter email:"
 	read -r username
@@ -622,7 +616,7 @@ read_command() {
 
 
 # Read arguments
-configfile="$HOME/.config/smail/smail.conf"
+configfile="$HOME/.config/S-Mail/S-Mail.conf"
 read_opts "$@"
 
 # Configuration step
